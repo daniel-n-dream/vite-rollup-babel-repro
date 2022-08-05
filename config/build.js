@@ -28,8 +28,10 @@ libraries.forEach(async (libItem) => {
     ],
     build: {
       lib: libItem,
-      rollupOptions: {
-      },
+      emptyOutDir: true,
+      outDir: '../dist',
+      rollupOptions: {},
+      target: 'chrome39',
     },
   });
 });
